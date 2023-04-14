@@ -112,8 +112,10 @@
       <span slot="footer" class="dialog-footer">
         <el-button @click="forgetDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="resetInfo">确 定</el-button>
-         <el-button @click="forgetDialogVisible = false">取 消1</el-button>
-        <el-button type="primary" @click="resetInfo">确 定1</el-button>
+        <el-button @click="forgetDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="resetInfo">确 定</el-button>
+        <el-button @click="forgetDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="resetInfo">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -137,11 +139,14 @@ export default {
       isLogin: true,
       btntxt: '获取验证码',
       disabled: false,
+      showLoading: false,
+      showLoading1: false,
+      showLoading2: false,
       time: 0,
       forgetDialogVisible: false,
-      num:123,
-      num1:456,
-      num2:789
+      num: 123,
+      num1: 456,
+      num2: 789,
       // 这是登录表单的数据绑定对象
       loginForm: {
         username: window.sessionStorage.getItem('loginUsername') || '',
