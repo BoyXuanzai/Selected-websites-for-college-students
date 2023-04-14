@@ -112,6 +112,10 @@
       <span slot="footer" class="dialog-footer">
         <el-button @click="forgetDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="resetInfo">确 定</el-button>
+        <el-button @click="forgetDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="resetInfo">确 定</el-button>
+        <el-button @click="forgetDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="resetInfo">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -135,6 +139,9 @@ export default {
       isLogin: true,
       btntxt: '获取验证码',
       disabled: false,
+      showLoading: false,
+      showLoading1: false,
+      showLoading2: false,
       time: 0,
       forgetDialogVisible: false,
       // 这是登录表单的数据绑定对象
